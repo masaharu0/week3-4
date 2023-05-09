@@ -23,7 +23,7 @@ get_password() {
     service=$(echo $result | cut -d ',' -f 1)
     user=$(echo $result | cut -d ',' -f 2)
     pass=$(echo $result | cut -d ',' -f 3)
-    echo " $service\n$user\n$pass"
+    echo -e " $service\n$user\n$pass"
   else
     echo "そのサービス名は登録されていません。"
   fi
