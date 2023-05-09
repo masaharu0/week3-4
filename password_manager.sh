@@ -19,7 +19,7 @@ get_password() {
   read service_name
   result=$(grep -F "サービス名:${service_name}," $password_file)
 
-  if [ -n "$result" ]; then
+  if [ "$result" ]; then
     service=$(echo $result | cut -d ',' -f 1)
     user=$(echo $result | cut -d ',' -f 2)
     pass=$(echo $result | cut -d ',' -f 3)
